@@ -19,7 +19,12 @@ export function activate(context: vscode.ExtensionContext) {
 			const functionName = document.getText(document.getWordRangeAtPosition(selection.start));
 
 			child_process.exec(`${bannerCommand} ${functionName}`,(err,stdout,stderr) => {
-				const commentLine = `${commentBegin}\n ${stdout}\n ${commentEnd}`;
+				var commentLine = '';
+				if (commentEnd === '') {
+					stdout.split('\n').forEach((line) => {commentLine += `${commentBegin} ${line}\n`;});
+				} else {
+					commentLine = `${commentBegin}\n ${stdout}\n ${commentEnd}`;
+				}
 				editor.edit(editBuilder => {
 						editBuilder.insert(new vscode.Position(line.lineNumber, 0), commentLine + '\n');
 				});

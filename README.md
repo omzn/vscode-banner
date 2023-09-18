@@ -22,13 +22,17 @@ vscode-banner configurationに設定が3つあります．
 
 * `extension.bannerCommand (Banner Command)`: バナーを生成するコマンドをオプション込みで指定します．デフォルトは`figlet -l -w 240 -f univers `です．
 * `extension.commentBegin (Comment Begin)`: コメント行の開始シンボルです．
-* `extension.commentEnd (Comment End)`: コメント行の終了シンボルです．
+* `extension.commentEnd (Comment End)`: コメント行の終了シンボルです．終了シンボルを省略した場合，`commentBegin`に指定されたシンボルによる単行コメントの連続でバナーを表示します．
 
 ## Known Issues
 
 あくまで，「カーソル位置にある単語」を「1行上にコメントとして表示する」だけです．
 
 ## Release Notes
+
+### 0.0.2
+
+単行コメントのみでバナーを生成できるように．
 
 ### 0.0.1
 
