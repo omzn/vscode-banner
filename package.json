@@ -1,7 +1,10 @@
 {
   "name": "vscode-banner",
-  "displayName": "vscode-banner",
-  "description": "Banner function name as a comment",
+  "displayName": "VScode Banner Comment Generator",
+  "description": "Generate Banner Comment from a selected word",
+  "icon": "images/banner.png",
+  "publisher": "Osamu Mizuno (@omzn)",
+  "license": "SEE LICENSE IN LICENSE.md",
   "version": "0.0.1",
   "repository": {
     "type": "git",
@@ -21,7 +24,7 @@
     "commands": [
       {
         "command": "vscode-banner.bannerFunction",
-        "title": "Banner function name as a comment"
+        "title": "Generate Banner Comment"
       }
     ],
     "configuration": {
