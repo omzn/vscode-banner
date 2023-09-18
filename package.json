@@ -3,11 +3,15 @@
   "displayName": "vscode-banner",
   "description": "Banner function name as a comment",
   "version": "0.0.1",
-  "engines": {
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/omzn/vscode-banner.git"
+  },
+    "engines": {
     "vscode": "^1.82.0"
   },
   "categories": [
-    "Other"
+    "Snippets"
   ],
   "activationEvents": [
     "*"
